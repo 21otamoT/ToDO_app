@@ -1,0 +1,276 @@
+html,body,header,main,footer,.home,.works,h1,p {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+header {
+  font-size: 34px;
+  margin: 0 auto;
+  font-weight: bold;
+  background-color: black;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+.home {
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  position: absolute;
+}
+.menu {
+  float: right;
+  display: block;
+}
+nav a {
+  padding: 0;
+  margin: 0;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+}
+#g-nav {
+  display: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  height: 3780px;
+}
+main > img {
+  width: 100%;
+  max-width: 100%;
+  height: 800px;
+  margin-top: 20px;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+article {
+  background-color: #fff;
+}
+#about {
+  height: 50px;
+}
+.about {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 960px;
+  height: 700px;
+}
+.about > img {
+  border-radius: 50%;
+  width: 280px;
+  height: 230px;
+}
+li,p {
+  font-size: 18px;
+}
+li {
+  margin-left: 33px;
+}
+h2 {
+  font-size: 24px;
+}
+.name {
+  margin-left: 40px;
+}
+.skill {
+  margin-left: 20px;
+}
+.list {
+  margin-left: 20px;
+}
+#works {
+  height: 50px;
+}
+.works {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  height: 800px;
+  margin: 60px auto 0;
+}
+#hobby {
+  height: 50px;
+}
+.items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 800px;
+}
+.item img {
+  width: 404.5px;
+  height: 250px;
+}
+.img1 {
+  border:solid 3px #2710d5;
+}
+.img2 {
+  border: solid 3px rgb(230, 164, 11);
+}
+.item {
+  margin-left: 20px;
+}
+.item p {
+  text-align: center;
+}
+footer {
+  padding: 0;
+  margin: 0;
+}
+footer p {
+  text-align: center;
+}
+.hobby {
+  margin: 0 auto;
+  height: 1100px;
+}
+.book-contener {
+  width: 100%;
+  height: 600px;
+  margin-top: 50px;
+}
+.carousel {
+  margin: 30px auto 0;
+}
+.bass {
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+}
+.carousel img {
+  width: 647.2px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px){
+  header {
+    max-width: 100%;
+    height: 50px;
+  }
+  .menu {
+    display: none;
+  }
+  /*========= ナビゲーションのためのCSS ===============*/
+
+  #g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+  top:-120%;
+    left:0;
+  width:100%;
+    height: 100vh;/*ナビの高さ*/
+  background:#999;
+    /*動き*/
+  transition: all 0.6s;
+  }
+  
+  /*アクティブクラスがついたら位置を0に*/
+  #g-nav.panelactive{
+    top: 0;
+  }
+  
+  /*ナビゲーションの縦スクロール*/
+  #g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /*ナビゲーション*/
+  #g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  /*リストのレイアウト設定*/
+  
+  #g-nav li{
+  list-style: none;
+    text-align: center; 
+  }
+  
+  #g-nav li a{
+  color: #333;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  }
+  
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn1{
+  position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+  top:10px;
+  right: 10px;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  }
+  
+  /*×に変化*/  
+  .openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background-color: #666;
+    width: 45%;
+  }
+  
+  .openbtn1 span:nth-of-type(1) {
+  top:15px; 
+  }
+  
+  .openbtn1 span:nth-of-type(2) {
+  top:23px;
+  }
+  
+  .openbtn1 span:nth-of-type(3) {
+  top:31px;
+  }
+  
+  .openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  
+  .openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+  }
+  
+  .openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+}
