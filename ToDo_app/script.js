@@ -3,12 +3,17 @@ const input = document.querySelector('#input');
 const ul = document.querySelector('#ul');
 
 const todos = JSON.parse(localStorage.getItem('todos'));
-
+if (todos) {
+  todos.forEach(todo => {
+    add(todo);
+  });
+}
 bt.addEventListener('click',(event)=> {
   event.preventDefault();
   add();
-});
- const add = (todo)=> {
+  });
+
+function add(todo) {
   let todoText = input.value;
 
   if (todo) {
@@ -32,6 +37,7 @@ bt.addEventListener('click',(event)=> {
 
     li.addEventListener('click',()=>{
       li.classList.toggle('text-decoration-line-through');
+      saveDate();
     });
 
     ul.appendChild(li);
@@ -39,21 +45,17 @@ bt.addEventListener('click',(event)=> {
     saveDate();
   }
 };
-const saveDate = ()=> {
+
+function saveDate() {
   const lists = document.querySelectorAll('li');
   let todos = [];
 
-  lists.forEach(list => {
-    let todo = {
-      text: list.innerText,
-      complated: list.classList.contains('text-decoration-line-through')
-    } 
-    todos.push(list.innerText);
+  lists.forEach((li) => {
+     todos.push({
+      text: li.innerText,
+      complated: li.classList.contains('text-decoration-line-through')
+     }) 
+    
   });
   localStorage.setItem('todos',JSON.stringify(todos));
 };
-if (todos) {
-  todos.forEach(todo => {
-    add(todo);
-  });
-}
