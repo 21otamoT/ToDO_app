@@ -4,7 +4,7 @@ const ul = document.querySelector('#ul');
 
 const todos = JSON.parse(localStorage.getItem('todos'));
 
-form.addEventListener('click',(event)=> {
+bt.addEventListener('click',(event)=> {
   event.preventDefault();
   add();
 });
