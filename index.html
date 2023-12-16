@@ -49,15 +49,19 @@
       .list-group-item {
         list-style: none;
         text-align: center;
-        border: 1px solid gray;
         border-left: 5px solid #1ac;
         border-bottom: 1px solid #1ac;
-        background-color: #fafafa;
+        background-color: rgba(18, 165, 198, 0.1);
         width: 500px;
         margin: 0 auto;
       }
       .text-decoration-line-through {
         text-decoration: line-through;
+      }
+      button {
+        border: 1px solid #1ac;
+        background-color: rgba(18, 165, 198, 0.1);
+        box-shadow: 1px 1px 2px #1ac;
       }
       @media screen and (max-width:768px) {
         #input {
@@ -75,7 +79,7 @@
   </head>
   <body>
     <canvas id="clock"></canvas>
-    <h1 style="color: rgb(15, 93, 226)";>ToDo</h1>
+    <h1 style="color: #1ac";>ToDoリスト</h1>
     <form id="form">
         <input type="text" id="input" placeholder="TODOを入力" autocomplete="off">
         <button>追加</button>
