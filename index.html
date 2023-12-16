@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="ToDolist">
+    <title>ToDolist</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #input {
+        width: 400px;
+        margin-left: 40px;
+      }
+      #form {
+        text-align: center;
+      }
+      .list-group-item {
+        list-style: none;
+        text-align: center;
+        border: 1px solid gray;
+        background-color: #fafafa;
+        width: 400px;
+        margin: 0 auto;
+      }
+      .text-decoration-line-through {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: rgb(15, 93, 226)";>ToDo</h1>
+    <form id="form">
+        <input type="text" id="input" placeholder="TODOを入力" autocomplete="off">
+        <button id="bt">追加</button>
+    </form>
+      <ul class="list-group" id="ul"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
