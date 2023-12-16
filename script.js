@@ -8,7 +8,7 @@ if (todos) {
   todos.forEach(todo => {
     add(todo);
   });
-}
+};
 
 form.addEventListener('click',(event)=> {
   event.preventDefault();
@@ -130,4 +130,4 @@ window.onload = function()
         context.translate(-centerX, -centerY);
         context.restore();
     }
-}
+};
